@@ -17,8 +17,10 @@ app.use(express.static(path.join(__dirname, 'src')));
 app.use(express.static(path.join(__dirname)));
 
 app.get('/login', (req, res) => {
-    res.render('login')
+    res.render('login', {title: 'Log In'});
 });
+
+
 
 app.listen(process.env.PORT, () => {
     console.log(`The server is listening at http://${process.env.HOSTNAME}:${process.env.PORT}`);
