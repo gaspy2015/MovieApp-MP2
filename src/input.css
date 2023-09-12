@@ -19,7 +19,7 @@ body {
     background: #444;
 }
 
-.container {
+.container-log {
     position: relative;
     width: 70vw;
     height: 85vh;
@@ -29,7 +29,7 @@ body {
     overflow: hidden;
 }
 
-.container::before {
+.container-log::before {
     content: "";
     position: absolute;
     top: 0;
@@ -225,33 +225,33 @@ a {
 
 /*Animation*/
 
-.container.sign-up-mode::before {
+.container-log.sign-up-mode::before {
     transform: translateX(0);
 }
 
-.container.sign-up-mode .right-panel .image,
-.container.sign-up-mode .right-panel .content {
+.container-log.sign-up-mode .right-panel .image,
+.container-log.sign-up-mode .right-panel .content {
     transform: translateX(200%);
 }
 
-.container.sign-up-mode .left-panel .image,
-.container.sign-up-mode .left-panel .content {
+.container-log.sign-up-mode .left-panel .image,
+.container-log.sign-up-mode .left-panel .content {
     transform: translateX(0);
 }
 
-.container.sign-up-mode form.sign-in-form {
+.container-log.sign-up-mode form.sign-in-form {
     opacity: 0;
 }
 
-.container.sign-up-mode form.sign-up-form {
+.container-log.sign-up-mode form.sign-up-form {
     opacity: 1;
 }
 
-.container.sign-up-mode .right-panel {
+.container-log.sign-up-mode .right-panel {
     pointer-events: none;
 }
 
-.container.sign-up-mode .left-panel {
+.container-log.sign-up-mode .left-panel {
     pointer-events: all;
 }
 
@@ -259,14 +259,14 @@ a {
 /*Responsive*/
 
 @media (max-width:779px) {
-    .container {
+    .container-log {
         width: 100vw;
         height: 100vh;
     }
 }
 
 @media (max-width:635px) {
-    .container::before {
+    .container-log::before {
         display: none;
     }
 
@@ -278,12 +278,12 @@ a {
         display: none;
     }
 
-    .container.sign-up-mode2 form.sign-up-form {
+    .container-log.sign-up-mode2 form.sign-up-form {
         display: flex;
         opacity: 1;
     }
 
-    .container.sign-up-mode2 form.sign-in-form {
+    .container-log.sign-up-mode2 form.sign-in-form {
         display: none;
     }
 

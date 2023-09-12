@@ -1,0 +1,44 @@
+<%- include('./partials/head.ejs') -%>
+    <div class="p-4">
+        <div class="container mx-auto">
+            <h1 class="text-2xl font-semibold mb-4">Sample Table</h1>
+            <table class="min-w-full bg-white border border-gray-200">
+                <thead>
+                    <tr>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID
+                        </th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Username</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email
+                        </th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Action</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                    <!-- Sample Data -->
+                    <tr class="hover:bg-gray-100">
+                        <td class="px-6 py-4 whitespace-nowrap">1</td>
+                        <td class="px-6 py-4 whitespace-nowrap">User1</td>
+                        <td class="px-6 py-4 whitespace-nowrap">user1@example.com</td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <button class="text-blue-600 hover:underline">Edit</button>
+                            <button class="text-red-600 hover:underline ml-2">Delete</button>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-gray-100">
+                        <td class="px-6 py-4 whitespace-nowrap">2</td>
+                        <td class="px-6 py-4 whitespace-nowrap">User2</td>
+                        <td class="px-6 py-4 whitespace-nowrap">user2@example.com</td>
+                        <td class="px-6 py-4 whitespace-nowrap">
+                            <button class="text-blue-600 hover:underline">Edit</button>
+                            <button class="text-red-600 hover:underline ml-2">Delete</button>
+                        </td>
+                    </tr>
+                    <!-- Add more sample data rows here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <%- include('./partials/footer.ejs') -%>

@@ -17,9 +17,12 @@ app.use(express.static(path.join(__dirname, 'src')));
 app.use(express.static(path.join(__dirname)));
 
 app.get('/login', (req, res) => {
-    res.render('login', {title: 'Log In'});
+    res.render('login', { title: 'Log In' });
 });
 
+app.get('/user', (req, res) => {
+    res.render('users', { title: 'List of Users' });
+});
 
 
 app.listen(process.env.PORT, () => {
