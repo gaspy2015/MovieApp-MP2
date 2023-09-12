@@ -1,0 +1,28 @@
+{
+    "users": [
+        {
+            "userid": 1,
+            "username": "superadmin",
+            "email": "natoy@gmail.com",
+            "password": "1234"
+        },
+        {
+            "userid": 2,
+            "username": "admin",
+            "email": "gaspy@gmail.com",
+            "password": "1234"
+        }
+    ],
+    "movies": [
+        {
+            "movie_id": 1,
+            "title": "Dyesebel",
+            "description": "",
+            "pic": "",
+            "release_date": ""
+        }
+    ],
+    "profile": {
+        "name": "typicode"
+    }
+}
