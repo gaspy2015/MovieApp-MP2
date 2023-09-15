@@ -3,8 +3,16 @@ require('dotenv').config();
 const ejs = require('ejs');
 const path = require('path');
 const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const Blog = require('./modules/blog');
 
 const app = express();
+
+mongoose.connect(process.env.DB_URL, { useNewUrlParser: true, useUnifiedTopology: true})
+.then((result)=>app.listen(process.env.PORT, () => {
+    console.log(`The server is listening at http://${process.env.HOSTNAME}:${process.env.PORT}`);
+}))
+.catch((err)=> console.log(err));
 
 app.set('view engine', 'ejs');
 
@@ -32,6 +40,17 @@ app.get('/movieInfo', (req, res) => {
     res.render('movieInfo', {title:'Movie Info'});
 });
 
-app.listen(process.env.PORT, () => {
-    console.log(`The server is listening at http://${process.env.HOSTNAME}:${process.env.PORT}`);
+app.get('/addUser', (req, res) => {
+    const blog = new Blog({
+        user: 'Chiz',
+        pos: 10000
+    });
+
+    blog.save()
+    .then((result)=> {
+        res.send(result)
+    })
+    .catch((err)=>{
+        console.log(err);
+    });
 });
