@@ -1,0 +1,21 @@
+<%- include("./partials/head.ejs")-%>
+<%- include("./partials/nav.ejs")-%>
+<div class="movie-container"> 
+<div class="select-wrapper">
+  <div class="dropdown">
+      <h3>Please select a Movie</h3>
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Select Movie
+      </button>
+      <ul class="dropdown-menu dropdown-menu-dark">
+        <li><a class="dropdown-item active" href="/movieSummary1">Cinema 1 | <%- `${c1Title}` -%></a></li>
+        <li><a class="dropdown-item" href="/movieSummary2">Cinema 2 | <%- `${c2Title}` -%></a></li>
+        <li><a class="dropdown-item" href="/movieSummary3">Cinema 3 | <%- `${c3Title}` -%></a></li>
+        <li><a class="dropdown-item" href="/movieSummary4">Cinema 4 | <%- `${c4Title}` -%></a></li>
+      </ul>
+    </div>
+  </div>
+  
+</div>
+
+<%- include("./partials/footer.ejs") -%>

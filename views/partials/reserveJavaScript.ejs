@@ -1,0 +1,11 @@
+<script>
+    const seat = document.querySelectorAll('.seat');
+
+    seat.forEach(div => { div.addEventListener('click', ()=> {
+        const seatID = div.getAttribute('id');
+
+        document.getElementById(seatID).style.visibility = "hidden";
+        console.log(seatID);
+        })
+    })
+</script>

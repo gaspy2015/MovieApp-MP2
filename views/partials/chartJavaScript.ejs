@@ -1,0 +1,91 @@
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+//for the dashboard chart
+const ctx1 = document.getElementById('movie1Chart');
+
+
+  new Chart(ctx1, {
+    type: 'bar',
+    data: {
+      labels: ['11:00AM to 1:00PM', '1:30PM to 3:30PM', '4:00PM to 6:00PM', '6:30PM to 8:30PM', '9:00PM to 11:00PM', '11:30PM to 1:30AM'],
+      datasets: [{
+        label: 'Cinema 1 Revenue',
+        data: [5000, 10000, 1000, 2000, 1000, 4000],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+  const ctx2 = document.getElementById('movie2Chart');
+
+  new Chart(ctx2, {
+    type: 'bar',
+    data: {
+      labels: ['11:00AM to 1:00PM', '1:30PM to 3:30PM', '4:00PM to 6:00PM', '6:30PM to 8:30PM', '9:00PM to 11:00PM', '11:30PM to 1:30AM'],
+      datasets: [{
+        label: 'Cinema 2 Revenue',
+        data: [3000, 13000, 4000, 2000, 7000, 2000],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+  const ctx3 = document.getElementById('movie3Chart');
+
+  new Chart(ctx3, {
+    type: 'bar',
+    data: {
+      labels: ['11:00AM to 1:00PM', '1:30PM to 3:30PM', '4:00PM to 6:00PM', '6:30PM to 8:30PM', '9:00PM to 11:00PM', '11:30PM to 1:30AM'],
+      datasets: [{
+        label: 'Cinema 3 Revenue',
+        data: [3000, 8000, 1000, 4000, 5000, 2000],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+  const ctx4 = document.getElementById('movie4Chart');
+
+  new Chart(ctx4, {
+    type: 'bar',
+    data: {
+      labels: ['11:00AM to 1:00PM', '1:30PM to 3:30PM', '4:00PM to 6:00PM', '6:30PM to 8:30PM', '9:00PM to 11:00PM', '11:30PM to 1:30AM'],
+      datasets: [{
+        label: 'Cinema 4 Revenue',
+        data: [6000, 15000, 7000, 2000, 4000, 5000],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+
+</script>
